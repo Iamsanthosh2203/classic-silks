@@ -158,7 +158,7 @@ function SubcategoryMen({ men }) {
       <div className="flex justify-between">
         <ol className="list-disc p-3 pl-10">
           <li>
-            <a href="/men">Formal & Casual Shirts</a>
+            <Link to={"/men"}>Formal & Casual Shirts</Link>
           </li>
           <li>
             <a href="/men">Formal & Casual Trousers</a>
