@@ -158,43 +158,43 @@ function SubcategoryMen({ men }) {
       <div className="flex justify-between">
         <ol className="list-disc p-3 pl-10">
           <li>
-            <Link to={"/men"}>Formal & Casual Shirts</Link>
+            <Link to="/men">Formal & Casual Shirts</Link>
           </li>
           <li>
-            <a href="/men">Formal & Casual Trousers</a>
+            <Link to="/men">Formal & Casual Trousers</Link>
           </li>
           <li>
-            <a href="/men">Silk Shirts & Dhoti Set</a>
+            <Link to="/men">Silk Shirts & Dhoti Set</Link>
           </li>
           <li>
-            <a href="/men">Cotton Shirts & Dhoti Set</a>
+            <Link to="/men">Cotton Shirts & Dhoti Set</Link>
           </li>
           <li>
-            <a href="/men">T-shirts</a>
+            <Link to="/men">T-shirts</Link>
           </li>
           <li>
-            <a href="/men">Shorts</a>
+            <Link to="/men">Shorts</Link>
           </li>
         </ol>
 
         <ol className="list-disc p-3">
           <li>
-            <a href="/men">Blazers</a>
+            <Link to="/men">Blazers</Link>
           </li>
           <li>
-            <a href="/men">Lungis</a>
+            <Link to="/men">Lungis</Link>
           </li>
           <li>
-            <a href="/men">Cotton Dhotis</a>
+            <Link to="/men">Cotton Dhotis</Link>
           </li>
           <li>
-            <a href="/men">Silk Dhotis</a>
+            <Link to="/men">Silk Dhotis</Link>
           </li>
           <li>
-            <a href="/men">Sutings & Shirtings</a>
+            <Link to="/men">Sutings & Shirtings</Link>
           </li>
           <li>
-            <a href="/men">Ethnic Wear</a>
+            <Link to="/men">Ethnic Wear</Link>
           </li>
         </ol>
       </div>
