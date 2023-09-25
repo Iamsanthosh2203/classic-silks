@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { data } from "../constants/Data";
+import { data } from "./Data";
 import { Link } from "react-router-dom";
 
 import starfull from "../assets/starfull.png";
@@ -10,7 +10,7 @@ const ButtonGroup = ({ next, previous }) => {
   return (
     <div className="carousel-button-group mb-4 gap-4 flex justify-between items-center w-full mt-4">
       <h1 className="text-4xl font-bold basis-[100%] text-center font-primary">
-        NEW ARRIVALS
+        You Might Also Like
       </h1>
       <div className="flex">
         <button className="block p-3 " onClick={() => previous()}>
@@ -56,7 +56,7 @@ ButtonGroup.propTypes = {
   }).isRequired,
 };
 
-const NewArrivals = () => {
+const RandomItems = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -115,4 +115,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default RandomItems;
