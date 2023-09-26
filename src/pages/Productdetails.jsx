@@ -2,21 +2,23 @@ import Header from "../constants/Header";
 import Footer from "../constants/Footer";
 import Alert from "../constants/Alert";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { data } from "../constants/Data";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Customers from "../constants/Customers";
 import RandomItems from "../constants/RandomItems";
 
-function Productdetails() {
+function Productdetails({ cart, setCart }) {
   const { itemId } = useParams();
 
   const id = data[itemId - 1];
+  console.log(id);
   return (
     <>
       <Alert />
       <Header />
-      <Productdetail id={id} />
+      <Productdetail id={id} setCart={setCart} cart={cart} />
       <Customers />
       <RandomItems />
       <Footer />
@@ -24,9 +26,34 @@ function Productdetails() {
   );
 }
 
-function Productdetail({ id }) {
+function Productdetail({ id, cart, setCart }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const [number, setNumber] = useState(1);
+
+  const handlePurchaseClick = () => {
+    // Check if a size is selected before adding to the cart
+    if (selectedSize) {
+      // Create a new cart item object
+      const newItem = {
+        id: id.id, // You can customize this based on your data structure
+        size: selectedSize,
+        quantity: number,
+        description: id.description,
+        img: id.img,
+        title: id.title,
+      };
+
+      // Update the cart state by adding the new item
+      setCart([...cart, newItem]);
+
+      // Optionally, you can reset the selected size and quantity after adding to the cart
+      setSelectedSize(null);
+      setNumber(1);
+    } else {
+      // Show an alert or message indicating that a size must be selected
+      alert("Please select a size before adding to the cart.");
+    }
+  };
 
   return (
     <section className="flex flex-col md:flex-row px-12 my-4 font-primary justify-evenly">
@@ -126,9 +153,13 @@ function Productdetail({ id }) {
             </button>
           </div>
 
-          <button className="p-4 w-full hover:bg-[#d2d2d2] hover:text-black bg-black text-white rounded-full duration-300">
+          <Link
+            to={"/cart"}
+            className="p-4 w-full hover:bg-[#d2d2d2] hover:text-black bg-black text-white rounded-full duration-300"
+            onClick={handlePurchaseClick}
+          >
             Purchase This Product
-          </button>
+          </Link>
         </div>
       </div>
     </section>
