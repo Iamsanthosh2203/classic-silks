@@ -25,7 +25,7 @@ function CartSection({ cart, onDelete }) {
   // Check if the cart is empty
   if (cart.length === 0) {
     return (
-      <section className="flex flex-col font-primary px-7 md:px-44 mt-8 h-[40vh] justify-center items-center">
+      <section className="flex flex-col font-primary px-7 md:px-44 mt-8 h-[40vh] justify-center items-center text-center">
         <h1 className="text-4xl font-semibold">Your Cart</h1>
         <p className="text-xl">
           Your cart is empty. Add items to your cart to see them here.
