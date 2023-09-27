@@ -107,7 +107,9 @@ function Header() {
         />
       </div>
       <div className="flex gap-6">
-        <i className="fa-solid fa-cart-shopping"></i>
+        <div className="flex gap-2">
+          <Link to={"/cart"} className="fa-solid fa-cart-shopping"></Link>
+        </div>
         <i className="fa-regular fa-user"></i>
       </div>
 
