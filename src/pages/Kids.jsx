@@ -120,7 +120,7 @@ function MenSection() {
             />
           </svg>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 mt-5 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-4">
           {data
             .filter((item) => item.category === "kids")
             .map((item) => (
