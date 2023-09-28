@@ -12,6 +12,15 @@ import RandomItems from "../constants/RandomItems";
 function Productdetails({ cart, setCart }) {
   const { itemId } = useParams();
 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can use 'auto' for instant scrolling
+    });
+  }
+
+  scrollToTop();
+
   const id = data[itemId - 1];
   console.log(id);
   return (

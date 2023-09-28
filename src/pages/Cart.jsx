@@ -46,7 +46,11 @@ function CartSection({ cart, onDelete }) {
               className="p-4 flex rounded-xl border justify-between gap-3"
             >
               <div className="flex md:flex-row gap-5 flex-col">
-                <img className="rounded-xl" src={item.img} alt="" />
+                <img
+                  className="rounded-xl h-[200px] w-[200px] mx-auto"
+                  src={item.img}
+                  alt={item.description}
+                />
                 <div className="ml-4 flex flex-col justify-center gap-2">
                   <h2 className="text-xl">{item.description}</h2>
                   <p>

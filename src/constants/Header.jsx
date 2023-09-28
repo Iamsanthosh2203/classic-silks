@@ -153,8 +153,8 @@ function SubcategoryMen({ men }) {
     <div
       className={
         men
-          ? "transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl"
-          : "transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh]"
+          ? "transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl z-10"
+          : "transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh] z-10"
       }
     >
       <div className="flex justify-between">
@@ -209,8 +209,8 @@ function SubcategoryWomen({ women }) {
     <div
       className={
         women
-          ? "transform translate-y-0 duration-200 font-primary block absolute -bottom-72 bg-[#fafafa] p-4 shadow-xl min-w-[70vh] rounded-xl"
-          : "transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl min-w-[70vh]"
+          ? "transform translate-y-0 duration-200 font-primary block absolute -bottom-72 bg-[#fafafa] p-4 shadow-xl min-w-[73vh] rounded-xl"
+          : "transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[80vh]"
       }
     >
       <div className="flex justify-between">

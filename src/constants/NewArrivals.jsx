@@ -85,25 +85,27 @@ const NewArrivals = () => {
           renderButtonGroupOutside={true}
           customButtonGroup={<ButtonGroup />}
         >
-          {data.map((item) => (
-            <Link
-              key={item.id}
-              className="cursor-pointer mx-9 font-primary"
-              to={`/productdetails/${item.id}`}
-              onClick={() => console.log(item.id)}
-            >
-              <img src={item.img} className="rounded-xl" />
-              <h3 className=" text-lg font-bold">{item.title}</h3>
-              <div className="flex gap-2">
-                <img src={starfull} alt="starfull" className="w-4 h-4" />
-                <img src={starfull} alt="starfull" className="w-4 h-4" />
-                <img src={starfull} alt="starfull" className="w-4 h-4" />
-                <img src={starfull} alt="starfull" className="w-4 h-4" />
+          {data
+            .filter((item) => item.category === "men")
+            .map((item) => (
+              <Link
+                key={item.id}
+                className="cursor-pointer mx-9 font-primary"
+                to={`/productdetails/${item.id}`}
+                onClick={() => console.log(item.id)}
+              >
+                <img src={item.img} className="rounded-xl" />
+                <h3 className=" text-lg font-bold">{item.title}</h3>
+                <div className="flex gap-2">
+                  <img src={starfull} alt="starfull" className="w-4 h-4" />
+                  <img src={starfull} alt="starfull" className="w-4 h-4" />
+                  <img src={starfull} alt="starfull" className="w-4 h-4" />
+                  <img src={starfull} alt="starfull" className="w-4 h-4" />
 
-                <p>{item.rating}</p>
-              </div>
-            </Link>
-          ))}
+                  <p>{item.rating}</p>
+                </div>
+              </Link>
+            ))}
         </Carousel>
       </div>
       <div className="flex justify-center items-center mb-4 border-b-2 pb-3 mx-16">
