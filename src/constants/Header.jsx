@@ -117,8 +117,8 @@ function Header() {
       <div
         className={
           menu
-            ? "duration-200 translate-x-0 absolute left-0 top-0 h-screen w-[70vw] bg-black text-white"
-            : "-translate-x-full duration-200 absolute left-0 top-0 h-screen w-[50vw] bg-black text-white"
+            ? "duration-200 z-10 translate-x-0 absolute left-0 top-0 h-screen w-[70vw] bg-black text-white"
+            : "-translate-x-full duration-200 absolute left-0 top-0 h-screen w-[50vw] bg-black text-white z-10"
         }
       >
         <div className="flex p-10 flex-col">
@@ -153,8 +153,8 @@ function SubcategoryMen({ men }) {
     <div
       className={
         men
-          ? "transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl z-10"
-          : "transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh] z-10"
+          ? "z-10 transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl z-10"
+          : "z-10 transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh] z-10"
       }
     >
       <div className="flex justify-between">
@@ -209,8 +209,8 @@ function SubcategoryWomen({ women }) {
     <div
       className={
         women
-          ? "transform translate-y-0 duration-200 font-primary block absolute -bottom-72 bg-[#fafafa] p-4 shadow-xl min-w-[73vh] rounded-xl"
-          : "transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[80vh]"
+          ? "z-10 transform translate-y-0 duration-200 font-primary block absolute -bottom-72 bg-[#fafafa] p-4 shadow-xl min-w-[73vh] rounded-xl"
+          : "z-10 transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[80vh]"
       }
     >
       <div className="flex justify-between">
@@ -286,8 +286,8 @@ function SubcategoryKids({ kids }) {
     <div
       className={
         kids
-          ? "transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl"
-          : "transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh]"
+          ? "z-10 transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl"
+          : "z-10 transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh]"
       }
     >
       <div className="flex justify-between">

@@ -3,6 +3,7 @@ import Header from "../constants/Header";
 import hero from "../assets/hero.png";
 import NewArrivals from "../constants/NewArrivals";
 import Customers from "../constants/Customers";
+import OnSale from "../constants/OnSale";
 import Footer from "../constants/Footer";
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
       <Header />
       <Hero />
       <NewArrivals />
-      <NewArrivals />
+      <OnSale />
       <DressStyle />
       <Customers />
       <Footer />

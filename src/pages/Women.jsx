@@ -8,6 +8,15 @@ import starfull from "../assets/starfull.png";
 import { useState } from "react";
 
 function Women() {
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can use 'auto' for instant scrolling
+    });
+  }
+
+  scrollToTop();
+
   return (
     <>
       <Alert />
@@ -126,7 +135,7 @@ function MenSection() {
             .map((item) => (
               <Link to={`/productdetails/${item.id}`} key={item.id}>
                 <img
-                  className="rounded-xl h-[400px] w-full object-cover"
+                  className="rounded-xl h-[400px] w-full object-scale-down"
                   src={item.img}
                   alt={item.title}
                 />

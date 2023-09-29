@@ -9,7 +9,7 @@ const ButtonGroup = ({ next, previous }) => {
   return (
     <div className="carousel-button-group mb-4 gap-4 flex justify-between items-center w-full mt-4">
       <h1 className="text-4xl font-bold basis-[100%] text-center font-primary">
-        NEW ARRIVALS
+        ON SALE
       </h1>
       <div className="flex">
         <button className="block p-3 " onClick={() => previous()}>
@@ -55,7 +55,7 @@ ButtonGroup.propTypes = {
   }).isRequired,
 };
 
-const NewArrivals = () => {
+const OnSale = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -119,4 +119,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default OnSale;

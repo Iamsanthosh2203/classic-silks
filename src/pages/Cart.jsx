@@ -1,5 +1,6 @@
 import Header from "../constants/Header";
 import Footer from "../constants/Footer";
+import { Link } from "react-router-dom";
 
 function Cart({ cart, setCart }) {
   console.log(cart);
@@ -77,11 +78,14 @@ function CartSection({ cart, onDelete }) {
           </>
         ))}
 
-        <button className="group text-white bg-black md:w-1/2 w-full mx-auto rounded-full py-4 flex justify-center items-center gap-2">
+        <Link
+          to="/form"
+          className="group text-white bg-black md:w-1/2 w-full mx-auto rounded-full py-4 flex justify-center items-center gap-2"
+        >
           Go To Checkout
           {/* fontawesome right arrow */}
           <i className="group-hover:translate-x-4 duration-200 fas fa-arrow-right ml-4 text-xl"></i>
-        </button>
+        </Link>
       </div>
     </section>
   );

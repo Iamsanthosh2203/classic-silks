@@ -5,6 +5,9 @@ import Men from "./pages/Men";
 import Kids from "./pages/Kids";
 import Women from "./pages/Women";
 import Cart from "./pages/Cart";
+import AllProducts from "./pages/AllProducts";
+import Form from "./pages/Form";
+
 import { useState } from "react";
 
 export default function App() {
@@ -21,6 +24,8 @@ export default function App() {
         <Route path="/men" element={<Men />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/women" element={<Women />} />
+        <Route path="/allproducts" element={<AllProducts />} />
+        <Route path="/form" element={<Form />} />
 
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>

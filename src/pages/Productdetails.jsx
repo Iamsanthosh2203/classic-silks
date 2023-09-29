@@ -164,7 +164,7 @@ function Productdetail({ id, cart, setCart }) {
 
           <Link
             to={"/cart"}
-            className="p-4 w-full hover:bg-[#d2d2d2] hover:text-black bg-black text-white rounded-full duration-300"
+            className="p-4 w-full hover:bg-[#d2d2d2] hover:text-black bg-black text-white rounded-full duration-300 text-center"
             onClick={handlePurchaseClick}
           >
             Purchase This Product

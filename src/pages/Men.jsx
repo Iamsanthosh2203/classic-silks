@@ -8,6 +8,15 @@ import starfull from "../assets/starfull.png";
 import { useState } from "react";
 
 function Men() {
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // You can use 'auto' for instant scrolling
+    });
+  }
+
+  scrollToTop();
+
   return (
     <>
       <Alert />

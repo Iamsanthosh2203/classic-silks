@@ -9,7 +9,7 @@ const ButtonGroup = ({ next, previous }) => {
   return (
     <div className="carousel-button-group mb-4 gap-4 flex justify-between items-center w-full mt-4">
       <h1 className="text-4xl font-bold basis-[100%] text-center font-primary">
-        NEW ARRIVALS
+        Men&rsquo;s
       </h1>
       <div className="flex">
         <button className="block p-3 " onClick={() => previous()}>
@@ -55,11 +55,11 @@ ButtonGroup.propTypes = {
   }).isRequired,
 };
 
-const NewArrivals = () => {
+const MensSlide = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 4,
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -67,7 +67,7 @@ const NewArrivals = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 4,
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -77,7 +77,7 @@ const NewArrivals = () => {
 
   return (
     <>
-      <div className="w-[85%] mx-auto relative flex flex-col-reverse mb-5 pb-5">
+      <div className="w-full mx-auto relative flex flex-col-reverse mb-5 pb-5">
         <Carousel
           responsive={responsive}
           arrows={false}
@@ -93,7 +93,10 @@ const NewArrivals = () => {
                 to={`/productdetails/${item.id}`}
                 onClick={() => console.log(item.id)}
               >
-                <img src={item.img} className="rounded-xl" />
+                <div
+                  className="w-64 h-64 bg-cover images bg-no-repeat rounded-xl"
+                  style={{ backgroundImage: `url(${item.img})` }}
+                ></div>
                 <h3 className=" text-lg font-bold">{item.title}</h3>
                 <div className="flex gap-2">
                   <img src={starfull} alt="starfull" className="w-4 h-4" />
@@ -107,10 +110,10 @@ const NewArrivals = () => {
             ))}
         </Carousel>
       </div>
-      <div className="flex justify-center items-center mb-4 border-b-2 pb-3 mx-16">
+      <div className="flex justify-center items-center mb-4 pb-3 md:mx-16 w-full">
         <Link
-          to={"/allproducts"}
-          className="  p-3 px-24 bg-white rounded-full border-2 text-black"
+          to={"/men"}
+          className="md:w-[50%] w-full text-center p-3 md:px-24 bg-white rounded-full border-2 text-black"
         >
           See More
         </Link>
@@ -119,4 +122,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default MensSlide;
