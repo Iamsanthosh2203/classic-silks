@@ -42,15 +42,15 @@ function FooterSec() {
         <div className="block md:flex flex-col gap-2 basis-full md:basis-[17em] mb-4 md:mb-0">
           <img src={logo2} alt="" />
           <p className="text-xl">
-            We have clothes that suits your style and which you’re proud to
-            wear. From women to men.
+            Your premier destination for exquisite silk sarees, nestled in the
+            heart of Koduvayur and Kollengode. We offer a captivating blend of
+            tradition and elegance for both wholesale and retail shoppers.
           </p>
 
           <div className="flex gap-3 mt-4">
             <i className="fab fa-twitter text-2xl bg-white h-12 w-12 text-black rounded-full flex justify-center items-center hover:text-white hover:bg-black duration-200 cursor-pointer"></i>
             <i className="fab fa-facebook text-2xl bg-white h-12 w-12 text-black rounded-full flex justify-center items-center hover:text-white hover:bg-black duration-200 cursor-pointer"></i>
             <i className="fab fa-instagram text-2xl bg-white h-12 w-12 text-black rounded-full flex justify-center items-center hover:text-white hover:bg-black duration-200 cursor-pointer"></i>
-            <i className="fab fa-github text-2xl bg-white h-12 w-12 text-black rounded-full flex justify-center items-center hover:text-white hover:bg-black duration-200 cursor-pointer"></i>
           </div>
         </div>
 

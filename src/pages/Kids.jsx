@@ -139,7 +139,9 @@ function MenSection() {
                   alt={item.title}
                 />
                 <div className="mt-2">
-                  <h5 className="text-xl font-bold px-2">{item.title}</h5>
+                  <h5 className="text-xl font-bold px-2">
+                    Whimsical Wonders: Kids' Clothing Collection
+                  </h5>
                   <div className="flex gap-2 px-2">
                     <img src={starfull} alt="starfull" className="w-4 h-4" />
                     <img src={starfull} alt="starfull" className="w-4 h-4" />
@@ -148,7 +150,9 @@ function MenSection() {
 
                     <p>{item.rating}</p>
                   </div>
-                  <p className="px-2">{item.description}</p>
+                  <p className="px-2">
+                    Kids Dress: Fashion Fun for Little Ones
+                  </p>
                 </div>
               </Link>
             ))}

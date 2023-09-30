@@ -92,7 +92,11 @@ const RandomItems = () => {
               to={`/productdetails/${item.id}`}
               onClick={() => console.log(item.id)}
             >
-              <img src={item.img} className="rounded-xl" />
+              <img
+                className="rounded-xl h-[400px] w-[360px] object-fill"
+                src={item.img}
+                alt={item.title}
+              />
               <h3 className=" text-lg font-bold">{item.title}</h3>
               <div className="flex gap-2">
                 <img src={starfull} alt="starfull" className="w-4 h-4" />

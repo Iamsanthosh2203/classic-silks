@@ -5,6 +5,7 @@ import NewArrivals from "../constants/NewArrivals";
 import Customers from "../constants/Customers";
 import OnSale from "../constants/OnSale";
 import Footer from "../constants/Footer";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -78,23 +79,35 @@ function DressStyle() {
       <h1 className="text-5xl font-bold text-center">Browse By Dress Style</h1>
       <div className="flex flex-col">
         <div className="flex justify-evenly flex-wrap">
-          <div className="basis-full md:basis-[30%] h-[20em]  mt-5 rounded-xl bg-1 cursor-pointer">
-            <p className="p-5 text-3xl font-bold">Casual</p>
-          </div>
+          <Link
+            to="/men"
+            className="basis-full md:basis-[30%] h-[20em]  mt-5 rounded-xl bg-1 cursor-pointer"
+          >
+            <div className="p-5 text-3xl font-bold">Casual</div>
+          </Link>
 
-          <div className="basis-full md:basis-[60%] h-[20em]  mt-5 rounded-xl bg-2 cursor-pointer bg-center">
+          <Link
+            to="men"
+            className="basis-full md:basis-[60%] h-[20em]  mt-5 rounded-xl bg-2 cursor-pointer bg-center"
+          >
             <p className="p-5 text-3xl font-bold">Formal</p>
-          </div>
+          </Link>
         </div>
 
         <div className="flex flex-row-reverse justify-evenly flex-wrap">
-          <div className="basis-full md:basis-[30%] h-[20em]  mt-5 rounded-xl bg-3 cursor-pointer">
+          <Link
+            to="/kids"
+            className="basis-full md:basis-[30%] h-[20em]  mt-5 rounded-xl bg-3 cursor-pointer"
+          >
             <p className="p-5 text-3xl font-bold">Kids</p>
-          </div>
+          </Link>
 
-          <div className="basis-full md:basis-[60%] h-[20em] mt-5 rounded-xl bg-4 cursor-pointer bg-white bg-center">
+          <Link
+            to="/saree"
+            className="basis-full md:basis-[60%] h-[20em] mt-5 rounded-xl bg-4 cursor-pointer bg-white bg-center"
+          >
             <p className="p-5 text-3xl font-bold">Wedding</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

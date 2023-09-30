@@ -53,7 +53,7 @@ function CartSection({ cart, onDelete }) {
                   alt={item.description}
                 />
                 <div className="ml-4 flex flex-col justify-center gap-2">
-                  <h2 className="text-xl">{item.description}</h2>
+                  <h2 className="text-xl">{item.title}</h2>
                   <p>
                     Size : <span className="text-[#919191]">{item.size}</span>
                   </p>
