@@ -76,7 +76,7 @@ function MenSection() {
             <img src={right} alt="right" />
           </div>
           <div className="flex w-full justify-between px-4 text-lg">
-            <a href="men">Wedding</a>
+            <a href="/men">Wedding</a>
             <img src={right} alt="right" />
           </div>
           <div className="flex w-full justify-between px-4 text-lg">

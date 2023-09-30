@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import starfull from "../assets/starfull.png";
 import { useState } from "react";
 
-function Women() {
+function Saree() {
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -65,15 +65,15 @@ function MenSection() {
         </div>
         <div className="flex w-full flex-col mt-4 gap-3">
           <div className="flex w-full justify-between px-4 text-lg">
-            <Link to={"/men"}>Men</Link>
+            <Link to="/men">Men</Link>
             <img src={right} alt="right" />
           </div>
           <div className="flex w-full justify-between px-4 text-lg">
-            <Link to={"/women"}>Women</Link>
+            <Link to="/women">Women</Link>
             <img src={right} alt="right" />
           </div>
           <div className="flex w-full justify-between px-4 text-lg">
-            <Link to={"/kids"}>Kids</Link>
+            <Link to="/kids">Kids</Link>
             <img src={right} alt="right" />
           </div>
           <div className="flex w-full justify-between px-4 text-lg">
@@ -114,7 +114,7 @@ function MenSection() {
 
       <div className="flex flex-col md:basis-[70%]">
         <div className="flex justify-between">
-          <h3 className="text-4xl font-bold">Women</h3>
+          <h3 className="text-4xl font-bold">Saree</h3>
           <svg
             width="14"
             height="14"
@@ -131,11 +131,11 @@ function MenSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-4">
           {data
-            .filter((item) => item.category === "women")
+            .filter((item) => item.category === "saree")
             .map((item) => (
               <Link to={`/productdetails/${item.id}`} key={item.id}>
                 <img
-                  className="rounded-xl h-[400px] w-full object-scale-down"
+                  className="rounded-xl h-[400px] w-full object-cover"
                   src={item.img}
                   alt={item.title}
                 />
@@ -159,4 +159,4 @@ function MenSection() {
   );
 }
 
-export default Women;
+export default Saree;
