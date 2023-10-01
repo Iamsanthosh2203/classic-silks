@@ -2,6 +2,8 @@ import logo from "../assets/logo.png";
 import down from "../assets/down.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 function Header() {
   const [men, setMen] = useState(false);
@@ -9,6 +11,27 @@ function Header() {
   const [kids, setKids] = useState(false);
 
   const [menu, setMenu] = useState(false);
+
+  const headerRef = useRef(null); // Ref to the header element
+
+  useEffect(() => {
+    // Function to close menus when clicking outside
+    function handleClickOutside(event) {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setMen(false);
+        setWomen(false);
+        setKids(false);
+      }
+    }
+
+    // Add event listener to the document
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      // Remove the event listener when component unmounts
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   function menFunction() {
     setMen(!men);
@@ -29,7 +52,10 @@ function Header() {
   }
 
   return (
-    <header className="px-3 md:px-12 justify-between md:justify-around items-center flex font-primary text-xl">
+    <header
+      ref={headerRef}
+      className="px-3 md:px-12 justify-between md:justify-around items-center flex font-primary text-xl"
+    >
       <svg
         width="24"
         height="24"
@@ -153,8 +179,8 @@ function SubcategoryMen({ men }) {
     <div
       className={
         men
-          ? "z-10 transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl z-10"
-          : "z-10 transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh] z-10"
+          ? "z-10 transform translate-y-0 duration-200 font-primary block absolute -bottom-64 bg-[#fafafa] p-4 shadow-xl w-[70vh] rounded-xl "
+          : "z-10 transform -translate-y-[300%] duration-200 font-primary block absolute -bottom-20 bg-[#fafafa] p-4 shadow-xl w-[70vh]"
       }
     >
       <div className="flex justify-between">
