@@ -98,7 +98,9 @@ const KidsSlide = () => {
                   className="w-64 h-64 bg-cover images bg-no-repeat rounded-xl"
                   style={{ backgroundImage: `url(${item.img})` }}
                 ></div>
-                <h3 className=" text-lg font-bold">{item.title}</h3>
+                <h3 className=" text-lg font-bold">
+                  Whimsical Wonders: Kids' Clothing Collection
+                </h3>
                 <div className="flex gap-2">
                   <img src={starfull} alt="starfull" className="w-4 h-4" />
                   <img src={starfull} alt="starfull" className="w-4 h-4" />

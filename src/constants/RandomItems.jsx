@@ -97,7 +97,7 @@ const RandomItems = () => {
                 src={item.img}
                 alt={item.title}
               />
-              <h3 className=" text-lg font-bold">{item.title}</h3>
+              <h3 className=" text-lg font-bold">Other Products</h3>
               <div className="flex gap-2">
                 <img src={starfull} alt="starfull" className="w-4 h-4" />
                 <img src={starfull} alt="starfull" className="w-4 h-4" />
@@ -111,9 +111,12 @@ const RandomItems = () => {
         </Carousel>
       </div>
       <div className="flex justify-center items-center mb-4 border-b-2 pb-3 mx-16">
-        <button className="  p-3 px-24 bg-white rounded-full border-2 text-black">
+        <Link
+          to="/allproducts"
+          className="  p-3 px-24 bg-white rounded-full border-2 text-black"
+        >
           See More
-        </button>
+        </Link>
       </div>
     </>
   );
