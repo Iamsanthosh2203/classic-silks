@@ -98,7 +98,9 @@ const OnSale = () => {
                   src={item.img}
                   alt={item.title}
                 />
-                <h3 className=" text-lg font-bold">{item.title}</h3>
+                <h3 className=" text-lg font-bold">
+                  Elegance Unveiled: The Timeless Charm of Women's Sarees
+                </h3>
                 <div className="flex gap-2">
                   <img src={starfull} alt="starfull" className="w-4 h-4" />
                   <img src={starfull} alt="starfull" className="w-4 h-4" />
