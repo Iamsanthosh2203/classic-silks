@@ -15,7 +15,11 @@ function FormSection() {
   return (
     <div className="px-5 md:px-44 font-primary my-10">
       <h1 className="text-4xl">Enquiry Form</h1>
-      <form className="text-xl">
+      <form
+        action="https://formspree.io/f/moqolkeo"
+        method="POST"
+        className="text-xl"
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-12 gap-3 text-xl mt-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="fname">
@@ -138,7 +142,10 @@ function FormSection() {
         </div>
 
         <div className="flex justify-center w-full mt-8">
-          <button className="p-5 text-white w-1/2 bg-black rounded-xl">
+          <button
+            type="submit"
+            className="p-5 text-white w-1/2 bg-black rounded-xl"
+          >
             Submit
           </button>
         </div>
